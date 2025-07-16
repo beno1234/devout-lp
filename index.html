@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page do Artigo - Reforma Tributária</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes bounceIn {
+        0% {
+          transform: scale(0.3);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 1;
+        }
+        70% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .animate-fadeIn {
+        animation: fadeIn 1s ease-out forwards;
+      }
+      .animate-slideInLeft {
+        animation: slideInLeft 0.8s ease-out forwards;
+      }
+      .animate-slideInRight {
+        animation: slideInRight 0.8s ease-out forwards;
+      }
+      .animate-bounceIn {
+        animation: bounceIn 0.8s ease-out forwards;
+      }
+
+      /* Atrasos para animações */
+      .delay-100 {
+        animation-delay: 0.1s;
+      }
+      .delay-200 {
+        animation-delay: 0.2s;
+      }
+      .delay-300 {
+        animation-delay: 0.3s;
+      }
+      .delay-400 {
+        animation-delay: 0.4s;
+      }
+      .delay-500 {
+        animation-delay: 0.5s;
+      }
+      .delay-600 {
+        animation-delay: 0.6s;
+      }
+      .delay-700 {
+        animation-delay: 0.7s;
+      }
+      .delay-800 {
+        animation-delay: 0.8s;
+      }
+      .delay-900 {
+        animation-delay: 0.9s;
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased bg-gray-50 text-gray-800">
+    <header
+      class="relative bg-gradient-to-r from-blue-900 to-blue-950 text-white py-20 overflow-hidden"
+    >
+      <div class="absolute inset-0 bg-black opacity-30 z-0"></div>
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <h1
+          class="text-5xl md:text-6xl font-extrabold leading-tight mb-4 animate-fadeIn"
+        >
+          <span class="block">Desvende os Segredos da</span>
+          <span class="block text-yellow-400"
+            >Reforma Tributária: Registro Contábil da CBS, IBS e IS</span
+          >
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 animate-fadeIn delay-200">
+          Aprenda tudo sobre a LC 214-16.01.2025 e transforme sua contabilidade
+          para os novos tributos.
+        </p>
+        <a
+          href="#form"
+          class="inline-block bg-yellow-500 text-blue-900 hover:bg-yellow-600 font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition duration-300 hover:scale-105 animate-bounceIn delay-400"
+        >
+          Quero Acessar o Artigo Agora!
+        </a>
+      </div>
+    </header>
+
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-4xl font-bold text-center mb-12 text-gray-900 animate-fadeIn delay-500"
+        >
+          O que você vai aprender neste artigo:
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div
+            class="bg-white rounded-lg shadow-xl p-8 transform transition duration-300 hover:scale-105 animate-slideInLeft"
+          >
+            <div class="text-5xl text-blue-800 mb-4 text-center">💡</div>
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900">
+              1. Introdução à Reforma Tributária
+            </h3>
+            <p class="text-gray-700">
+              Explore os conceitos básicos e a importância da Lei Complementar
+              nº 214/2025 e a redução da complexidade do sistema tributário
+              brasileiro. [cite: 561, 562, 563]
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-xl p-8 transform transition duration-300 hover:scale-105 animate-fadeIn delay-200"
+          >
+            <div class="text-5xl text-yellow-600 mb-4 text-center">⚙️</div>
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900">
+              2. Novos Tributos: CBS, IBS e IS
+            </h3>
+            <p class="text-gray-700">
+              Descubra os novos tributos (CBS, IBS, IS) que substituirão 6
+              impostos, e como eles impactarão o cenário tributário. [cite: 580,
+              581]
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-xl p-8 transform transition duration-300 hover:scale-105 animate-slideInRight"
+          >
+            <div class="text-5xl text-blue-600 mb-4 text-center">📈</div>
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900">
+              3. Regime Não Cumulativo
+            </h3>
+            <p class="text-gray-700">
+              Entenda a aplicação do regime não cumulativo para IBS e CBS e a
+              ampliação da base de incidência e apuração de créditos. [cite:
+              604, 606, 608]
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-xl p-8 transform transition duration-300 hover:scale-105 animate-slideInLeft delay-400"
+          >
+            <div class="text-5xl text-yellow-500 mb-4 text-center">🛠️</div>
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900">
+              4. Fato Gerador dos Novos Tributos
+            </h3>
+            <p class="text-gray-700">
+              Conheça o momento de ocorrência do fato gerador do IBS, CBS e
+              Imposto Seletivo para operações onerosas e não onerosas. [cite:
+              623, 633, 641]
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-xl p-8 transform transition duration-300 hover:scale-105 animate-fadeIn delay-500"
+          >
+            <div class="text-5xl text-blue-700 mb-4 text-center">🌟</div>
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900">
+              5. Débitos e Créditos da CBS e IBS - Momento da Apuração
+            </h3>
+            <p class="text-gray-700">
+              Saiba como se configura o fato gerador do IBS e CBS para débitos e
+              créditos, e a aplicação dos regimes de competência e caixa. [cite:
+              649, 650, 652]
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-xl p-8 transform transition duration-300 hover:scale-105 animate-slideInRight delay-600"
+          >
+            <div class="text-5xl text-yellow-400 mb-4 text-center">🔮</div>
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900">
+              6. Regime de Competência - Independe de Questões Tributárias
+            </h3>
+            <p class="text-gray-700">
+              Compreenda a importância do regime de competência para registros
+              contábeis, mesmo diante das permissões de apuração pelo regime de
+              caixa. [cite: 657, 669, 672]
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="form"
+      class="py-16 bg-gradient-to-r from-blue-900 to-blue-950 text-white"
+    >
+      <div class="container mx-auto px-6 text-center">
+        <h2
+          class="text-4xl md:text-5xl font-bold mb-8 animate-fadeIn delay-700"
+        >
+          Não Perca! Acesse o Artigo Completo Agora.
+        </h2>
+        <p class="text-xl mb-10 animate-fadeIn delay-800">
+          Preencha o formulário abaixo para receber o link exclusivo para o
+          artigo diretamente no seu e-mail e telefone, ou faça o **download
+          instantâneo**!
+        </p>
+
+        <div
+          class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-2xl animate-bounceIn delay-900"
+        >
+          <form action="#" method="POST" class="space-y-6 mb-6">
+            <div>
+              <label
+                for="name"
+                class="block text-gray-700 text-left text-sm font-bold mb-2"
+                >Nome Completo:</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+                placeholder="Seu nome"
+              />
+            </div>
+            <div>
+              <label
+                for="email"
+                class="block text-gray-700 text-left text-sm font-bold mb-2"
+                >E-mail:</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+                placeholder="seu.email@exemplo.com"
+              />
+            </div>
+            <div>
+              <label
+                for="phone"
+                class="block text-gray-700 text-left text-sm font-bold mb-2"
+                >Telefone (com DDD):</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+                placeholder="(XX) XXXXX-XXXX"
+              />
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-md"
+            >
+              Receber Link do Artigo
+            </button>
+          </form>
+
+          <p class="text-gray-700 mb-4">Ou, prefere baixar agora?</p>
+          <a
+            href="#"
+            download
+            class="w-full inline-block bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-md"
+          >
+            <svg
+              class="inline-block w-6 h-6 mr-2 -mt-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              ></path>
+            </svg>
+            Baixar Artigo Completo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-blue-950 text-white py-8">
+      <div class="container mx-auto px-6 text-center text-gray-400">
+        <p>
+          &copy; 2025 DEVOUT AUDITORES INDEPENDENTES S/S LTDA. Todos os direitos
+          reservados.
+        </p>
+        <p class="mt-2">
+          Desenvolvido com <span class="text-yellow-400">&hearts;</span> e
+          Tailwind CSS.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
