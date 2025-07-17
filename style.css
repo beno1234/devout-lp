@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "CLEAR";
+  src: url("./WOFF/ClearSans-Regular.woff");
+}
+
+.clear {
+  font-family: "CLEAR", sans-serif;
+}

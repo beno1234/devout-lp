@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page do Artigo - Reforma Tributária</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
     <style>
       @keyframes fadeIn {
         from {
@@ -109,10 +107,10 @@
       <div class="absolute inset-0 bg-black opacity-30 z-0"></div>
       <div class="container mx-auto px-6 text-center relative z-10">
         <h1
-          class="text-5xl md:text-6xl font-extrabold leading-tight mb-4 animate-fadeIn"
+          class="text-5xl md:text-6xl font-extrabold leading-tight mb-4 animate-fadeIn clear"
         >
           <span class="block">Desvende os Segredos da</span>
-          <span class="block text-yellow-400"
+          <span class="block text-[#d6b505]"
             >Reforma Tributária: Registro Contábil da CBS, IBS e IS</span
           >
         </h1>
@@ -120,19 +118,13 @@
           Aprenda tudo sobre a LC 214-16.01.2025 e transforme sua contabilidade
           para os novos tributos.
         </p>
-        <a
-          href="#form"
-          class="inline-block bg-yellow-500 text-blue-900 hover:bg-yellow-600 font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition duration-300 hover:scale-105 animate-bounceIn delay-400"
-        >
-          Quero Acessar o Artigo Agora!
-        </a>
       </div>
     </header>
 
     <section class="py-16 bg-white">
       <div class="container mx-auto px-6">
         <h2
-          class="text-4xl font-bold text-center mb-12 text-gray-900 animate-fadeIn delay-500"
+          class="text-4xl font-bold text-center mb-12 text-gray-900 animate-fadeIn delay-500 clear"
         >
           O que você vai aprender neste artigo:
         </h2>
@@ -142,7 +134,7 @@
             class="bg-white rounded-lg shadow-xl p-8 transform transition duration-300 hover:scale-105 animate-slideInLeft"
           >
             <div class="text-5xl text-blue-800 mb-4 text-center">💡</div>
-            <h3 class="text-2xl font-semibold mb-4 text-gray-900">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900 clear">
               1. Introdução à Reforma Tributária
             </h3>
             <p class="text-gray-700">
@@ -156,7 +148,7 @@
             class="bg-white rounded-lg shadow-xl p-8 transform transition duration-300 hover:scale-105 animate-fadeIn delay-200"
           >
             <div class="text-5xl text-yellow-600 mb-4 text-center">⚙️</div>
-            <h3 class="text-2xl font-semibold mb-4 text-gray-900">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900 clear">
               2. Novos Tributos: CBS, IBS e IS
             </h3>
             <p class="text-gray-700">
@@ -169,7 +161,7 @@
             class="bg-white rounded-lg shadow-xl p-8 transform transition duration-300 hover:scale-105 animate-slideInRight"
           >
             <div class="text-5xl text-blue-600 mb-4 text-center">📈</div>
-            <h3 class="text-2xl font-semibold mb-4 text-gray-900">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900 clear">
               3. Regime Não Cumulativo
             </h3>
             <p class="text-gray-700">
@@ -182,7 +174,7 @@
             class="bg-white rounded-lg shadow-xl p-8 transform transition duration-300 hover:scale-105 animate-slideInLeft delay-400"
           >
             <div class="text-5xl text-yellow-500 mb-4 text-center">🛠️</div>
-            <h3 class="text-2xl font-semibold mb-4 text-gray-900">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900 clear">
               4. Fato Gerador dos Novos Tributos
             </h3>
             <p class="text-gray-700">
@@ -195,7 +187,7 @@
             class="bg-white rounded-lg shadow-xl p-8 transform transition duration-300 hover:scale-105 animate-fadeIn delay-500"
           >
             <div class="text-5xl text-blue-700 mb-4 text-center">🌟</div>
-            <h3 class="text-2xl font-semibold mb-4 text-gray-900">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900 clear">
               5. Débitos e Créditos da CBS e IBS - Momento da Apuração
             </h3>
             <p class="text-gray-700">
@@ -208,7 +200,7 @@
             class="bg-white rounded-lg shadow-xl p-8 transform transition duration-300 hover:scale-105 animate-slideInRight delay-600"
           >
             <div class="text-5xl text-yellow-400 mb-4 text-center">🔮</div>
-            <h3 class="text-2xl font-semibold mb-4 text-gray-900">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900 clear">
               6. Regime de Competência - Independe de Questões Tributárias
             </h3>
             <p class="text-gray-700">
@@ -222,16 +214,91 @@
     </section>
 
     <section
-      id="form"
-      class="py-16 bg-gradient-to-r from-blue-900 to-blue-950 text-white"
+      class="py-16 bg-gradient-to-r from-blue-900 to-blue-950 text-center"
     >
+      <style>
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes bounceIn {
+          0% {
+            transform: scale(0.3);
+            opacity: 0;
+          }
+          50% {
+            transform: scale(1.05);
+            opacity: 1;
+          }
+          70% {
+            transform: scale(0.9);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 1s ease-out forwards;
+        }
+        .animate-bounceIn {
+          animation: bounceIn 0.8s ease-out forwards;
+        }
+        .delay-100 {
+          animation-delay: 0.1s;
+        }
+        .delay-300 {
+          animation-delay: 0.3s;
+        }
+        .delay-400 {
+          animation-delay: 0.4s;
+        }
+      </style>
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold mb-8 text-white animate-fadeIn delay-100"
+        >
+          Sobre o Autor
+        </h2>
+        <div
+          class="flex flex-col items-center max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-xl animate-fadeIn delay-300"
+        >
+          <img
+            src="assets/FOTO_Louri_04.png"
+            alt="Foto de Lourivaldo Lopes da Silva"
+            class="w-48 h-48 rounded-full object-cover mb-6 border-4 border-[#0092ff] shadow-lg animate-bounceIn delay-400"
+          />
+          <h3 class="text-2xl font-semibold mb-2 text-[#163247]">
+            Lourivaldo Lopes da Silva
+          </h3>
+          <p class="text-lg text-[#0092ff] mb-4">
+            Auditor, Contador, Professor Universitário
+          </p>
+          <p class="text-gray-700 leading-relaxed text-left">
+            Mestre em Contabilidade pela PUC – SP. Professor de Entidades
+            Congraçadas: CRC, Sindcont, Sescon etc. Especialista em Preço de
+            Transferência e com mais de 30 anos atuando na área contábil e
+            tributária. Sócio da Devout Auditores Independentes S/S Ltda. Autor
+            dos livros: "Contabilidade Geral e Tributária" e "Contabilidade
+            Avançada e Tributária".
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="form" class="py-16 text-white">
       <div class="container mx-auto px-6 text-center">
         <h2
-          class="text-4xl md:text-5xl font-bold mb-8 animate-fadeIn delay-700"
+          class="text-4xl md:text-5xl font-bold mb-8 animate-fadeIn delay-700 clear text-[#163247]"
         >
           Não Perca! Acesse o Artigo Completo Agora.
         </h2>
-        <p class="text-xl mb-10 animate-fadeIn delay-800">
+        <p class="text-xl mb-10 animate-fadeIn delay-800 text-[#163247]">
           Preencha o formulário abaixo para receber o link exclusivo para o
           artigo diretamente no seu e-mail e telefone, ou faça o **download
           instantâneo**!
@@ -288,7 +355,7 @@
             </div>
             <button
               type="submit"
-              class="w-full bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-md"
+              class="w-full bg-yellow-500 hover:bg-yellow-600 text-[#163247] font-bold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-md"
             >
               Receber Link do Artigo
             </button>
