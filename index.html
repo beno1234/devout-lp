@@ -291,99 +291,47 @@
       </div>
     </section>
 
-    <section id="form" class="py-16 text-white">
-      <div class="container mx-auto px-6 text-center">
-        <h2
-          class="text-4xl md:text-5xl font-bold mb-8 animate-fadeIn delay-700 clear text-[#163247]"
-        >
-          Não Perca! Acesse o Artigo Completo Agora.
-        </h2>
-        <p class="text-xl mb-10 animate-fadeIn delay-800 text-[#163247]">
-          Preencha o formulário abaixo para receber o link exclusivo para o
-          artigo diretamente no seu e-mail e telefone, ou faça o **download
-          instantâneo**!
+    <section class="bg-white py-16">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">Receba agora o PDF completo</h2>
+        <p class="mb-6 text-gray-600">
+          Preencha os dados para receber o material por e-mail e fazer o
+          download direto.
         </p>
-
-        <div
-          class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-2xl animate-bounceIn delay-900"
+        <form
+          id="downloadForm"
+          class="space-y-4 text-left"
+          method="POST"
+          action="/send-email"
         >
-          <form action="#" method="POST" class="space-y-6 mb-6">
-            <div>
-              <label
-                for="name"
-                class="block text-gray-700 text-left text-sm font-bold mb-2"
-                >Nome Completo:</label
-              >
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
-                placeholder="Seu nome"
-              />
-            </div>
-            <div>
-              <label
-                for="email"
-                class="block text-gray-700 text-left text-sm font-bold mb-2"
-                >E-mail:</label
-              >
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
-                placeholder="seu.email@exemplo.com"
-              />
-            </div>
-            <div>
-              <label
-                for="phone"
-                class="block text-gray-700 text-left text-sm font-bold mb-2"
-                >Telefone (com DDD):</label
-              >
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                required
-                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
-                placeholder="(XX) XXXXX-XXXX"
-              />
-            </div>
-            <button
-              type="submit"
-              class="w-full bg-yellow-500 hover:bg-yellow-600 text-[#163247] font-bold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-md"
-            >
-              Receber Link do Artigo
-            </button>
-          </form>
-
-          <p class="text-gray-700 mb-4">Ou, prefere baixar agora?</p>
-          <a
-            href="#"
-            download
-            class="w-full inline-block bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-md"
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="Seu nome"
+            class="w-full px-4 py-3 border rounded-md"
+          />
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Seu e-mail"
+            class="w-full px-4 py-3 border rounded-md"
+          />
+          <input
+            type="tel"
+            name="phone"
+            required
+            placeholder="Telefone"
+            class="w-full px-4 py-3 border rounded-md"
+          />
+          <button
+            type="submit"
+            class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-md transition"
           >
-            <svg
-              class="inline-block w-6 h-6 mr-2 -mt-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-              ></path>
-            </svg>
-            Baixar Artigo Completo
-          </a>
-        </div>
+            Baixar Artigo Agora
+          </button>
+        </form>
       </div>
     </section>
 
@@ -395,5 +343,52 @@
         </p>
       </div>
     </footer>
+
+    <script>
+      document
+        .getElementById("downloadForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const data = {
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value,
+          };
+
+          try {
+            const response = await fetch(
+              "https://seu-backend.onrender.com/send-email",
+              {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+              }
+            );
+
+            if (response.ok) {
+              // Disparar download automático
+              const link = document.createElement("a");
+              link.href =
+                "https://backend-devout.onrender.com/artigo-lourivaldo.pdf";
+              link.download = "artigo.pdf";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+
+              alert(
+                "E-mail enviado! Caso o download não inicie, verifique seu e-mail."
+              );
+              form.reset();
+            } else {
+              alert("Erro ao enviar. Tente novamente.");
+            }
+          } catch (error) {
+            console.error("Erro:", error);
+            alert("Erro ao enviar o formulário.");
+          }
+        });
+    </script>
   </body>
 </html>
